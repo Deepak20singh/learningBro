@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>learningBro • CI/CD Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; background: #0b1220; color: #e6eefc; }
+    header { padding: 48px 24px; text-align: center; background: linear-gradient(135deg, #141b2d, #0f172a); border-bottom: 1px solid #1f2a44; }
+    h1 { margin: 0 0 8px; font-size: 34px; }
+    p.sub { margin: 0; opacity: 0.8; }
+    .badge { display: inline-block; margin-top: 16px; padding: 6px 10px; border: 1px solid #264369; border-radius: 999px; font-size: 12px; letter-spacing: .4px; color: #9cc1ff; }
+    main { max-width: 900px; margin: 32px auto; padding: 0 16px 48px; }
+    .card { background: #0f192f; border: 1px solid #1e2d4d; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    code { background: #0b1220; padding: 2px 6px; border-radius: 6px; border: 1px solid #1f2a44; }
+    footer { text-align: center; padding: 28px 12px; font-size: 12px; color: #8ea7d6; border-top: 1px solid #1f2a44;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 CI/CD Demo — Jenkins + Docker on EC2</h1>
+    <p class="sub">Repo: <strong>learningBro</strong> • Auto-deployed via Jenkins.</p>
+    <div class="badge">Build time: <span id="build">latest</span></div>
+  </header>
+  <main>
+    <div class="card">
+      <h3>Pipeline Flow</h3>
+      <p><strong>Git push</strong> → Jenkins → <strong>Docker build</strong> → Old container stop → <strong>New container run</strong> → Live</p>
+    </div>
+    <div class="card">
+      Tip: is page me kuch bhi text change karke push karo → Jenkins automatically redeploy karega.
+      File: <code>index.html</code>
+    </div>
+  </main>
+  <footer>© CI/CD Demo • Static site via NGINX • Made by Deepak</footer>
+  <script>
+    document.getElementById('build').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
